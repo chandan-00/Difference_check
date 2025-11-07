@@ -2,9 +2,7 @@ import streamlit as st
 import pandas as pd
 from difflib import HtmlDiff, SequenceMatcher
 import re
-import io
 import base64
-import os
 from datetime import datetime
 
 # ====== APP CONFIG ======
@@ -379,13 +377,6 @@ if uploaded_file:
                         # Side-by-side display
                         # Generate true side-by-side diff table
                         styled_html = side_by_side_inline_diff(text_a, text_b)
-                        # Dark theme container
-                        # styled_html = f"""
-                        # <div style='background-color:#1e1e1e;color:white;padding:10px;border-radius:10px;font-family:monospace'>
-                        # {diff_html}
-                        # </div>
-                        # """
-                        # st.components.v1.html(diff_html, height=400, scrolling=True)
                         changes_summary.append(col)
                         diffs[col] = styled_html
                         with st.expander(f"🧩 {col}", expanded=False):

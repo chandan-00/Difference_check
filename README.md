@@ -1,0 +1,1 @@
+This project automates the process of identifying, removing, and categorizing duplicate entries across multiple datasets. It includes functionality to compare columns, generate detailed difference reports, and compile a full summary document highlighting variations between datasets.
