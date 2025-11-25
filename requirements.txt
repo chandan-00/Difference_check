@@ -1,2 +1,5 @@
 # Optional: pin versions for reproducible builds, e.g.
 openpyxl
+# If trying to replicate locally, uncomment the following lines to install streamlit and pandas
+# streamlit
+# pandas
