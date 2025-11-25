@@ -94,7 +94,7 @@ The app auto-detects number of records and text-only columns, as those are the f
 
 Choose the documents (rows) you want to compare.
 
-![intro](image.png)
+![intro](intro.png)
 
 
 ### 📌 Step 3 — Select Columns
@@ -113,7 +113,7 @@ with columns:
 ### 🧩 Inline View Output
 
 Displays text differences inline with highlights.
-![inline](image-1.png)
+![inline](inline.png)
 
 🧍 Side-by-Side View Output
 
