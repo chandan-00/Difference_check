@@ -7,7 +7,6 @@ It is especially useful for data analysts, QA teams, auditors, and engineers who
 ---
 
 ## 🚀 Features
-- Detect duplicate rows
 
 - Compare two datasets (CSV/XLSX)
 
@@ -44,57 +43,25 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 ---
-## ▶️ Usage
-Basic comparison
-```
-python diff_check.py \
-  --input1 old_data.csv \
-  --input2 new_data.csv \
-  --key-columns id,name \
-  --output-path output_folder
-  ```
 
-With duplicate detection
-```
-python diff_check.py \
-  --input1 dataset_v1.xlsx \
-  --input2 dataset_v2.xlsx \
-  --key-columns rec_id \
-  --output-path ./reports \
-  --duplicates true \
-  --format docx
-  ```
----
 ## 📄 Input & Output Formats
 ### Input:
 
 - CSV or Excel files
 
-- Two datasets (old vs new)
+- One dataset containing the unique documents in each row
 
 - Key columns to match records
 
+- Primary column which contains the id of the document
+
 ### Output:
 
-- Difference report (CSV/Excel)
+- Difference report for each column (CSV/Excel)
 
 - Categorized changes
 
-- Duplicate summary (optional)
-
 - Summary document (PDF/Docx)
-
----
-
-## ⚙️ Script Parameters
-| Parameter | Description |	Example |
-|---|---|---|
-|--input1 |	Baseline dataset |	old.csv
-|--input2 |	New dataset |	new.csv |
-|--key-columns |	Columns used to match rows |	id,email |
-|--output-path	 | Directory to store generated reports	| ./diff_output |
-|--duplicates | Enable duplicate detection | true
-| --format | Summary format (pdf, docx)	| pdf
 
 ---
 
@@ -107,20 +74,64 @@ Difference_check/
 ├── requirements.txt
 └── README.md
 ```
-
+---
 ## 🔍 How It Works
 
-- Loads two datasets
+### 🖥️ Streamlit Application
 
-- Optional: performs duplicate detection
+A full Streamlit application is available so users can run the tool without cloning or installing anything.
 
-- Compares datasets using key columns
+### 👉 Try the live app:
 
-- Identifies added, removed, and modified rows
+[Click here to try the app](https://waiverdifferencecheck.streamlit.app/)
 
-- Generates difference reports
+### 📂 Step 1 — Upload File
 
-- Builds a summary document
+Once the page loads, users can upload their Excel file containing the dataset.
+The app auto-detects number of records and text-only columns, as those are the focus for comparison.
+
+### 📑 Step 2 — Select Document IDs
+
+Choose the documents (rows) you want to compare.
+
+![intro](image.png)
+
+
+### 📌 Step 3 — Select Columns
+
+All text-based columns are auto-selected.
+Deselect or select only the ones needed.
+
+Example:
+Comparing IA.0819.R01.00 vs IA.0819.R01.01
+with columns:
+
+- Risk Assessment and Mitigation (D1e)
+
+- Amendment Summary Description
+
+### 🧩 Inline View Output
+
+Displays text differences inline with highlights.
+![inline](image-1.png)
+
+🧍 Side-by-Side View Output
+
+Displays columns compared side-by-side for easier review.
+![side_by_side](side_by_side.png)
+
+📥 Download Reports
+Download HTML Report
+
+Generates an HTML file showing highlighted differences.
+
+![column_report](column_report.png)
+
+Download Full Report
+
+Generates a summary document containing all selected comparisons.
+
+![full_report](full_report.png)
 
 ## 🤝 Contribution
 
