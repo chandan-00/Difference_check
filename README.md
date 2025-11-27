@@ -57,11 +57,11 @@ pip install -r requirements.txt
 
 ### Output:
 
-- Difference report for each column (CSV/Excel)
+- Difference report for each column (HTML report)
 
 - Categorized changes
 
-- Summary document (PDF/Docx)
+- Summary document (HTML report)
 
 ---
 
@@ -70,6 +70,7 @@ pip install -r requirements.txt
 Difference_check/
 ├── .devcontainer/
 ├── .gitattributes
+├── images
 ├── diff_check.py
 ├── requirements.txt
 └── README.md
@@ -94,7 +95,7 @@ The app auto-detects number of records and text-only columns, as those are the f
 
 Choose the documents (rows) you want to compare.
 
-![intro](intro.png)
+![intro](images/intro.png)
 
 
 ### 📌 Step 3 — Select Columns
@@ -113,25 +114,25 @@ with columns:
 ### 🧩 Inline View Output
 
 Displays text differences inline with highlights.
-![inline](inline.png)
+![inline](images/inline.png)
 
 🧍 Side-by-Side View Output
 
 Displays columns compared side-by-side for easier review.
-![side_by_side](side_by_side.png)
+![side_by_side](images/side_by_side.png)
 
 📥 Download Reports
 Download HTML Report
 
 Generates an HTML file showing highlighted differences.
 
-![column_report](column_report.png)
+![column_report](images/column_report.png)
 
 Download Full Report
 
 Generates a summary document containing all selected comparisons.
 
-![full_report](full_report.png)
+![full_report](images/full_report.png)
 
 ## 🤝 Contribution
 
@@ -144,8 +145,7 @@ Generates a summary document containing all selected comparisons.
 - Submit a pull request
 
 ## 📃 License
-
-License not specified (you may add MIT/Apache 2.0/etc.)
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
 ## 📬 Support
 
