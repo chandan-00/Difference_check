@@ -10,6 +10,18 @@ st.set_page_config(page_title="Waiver DiffChecker", layout="wide")
 st.title("Waiver Document DiffChecker")
 st.write("Compare two waiver records section by section (text columns only).")
 
+st.markdown(
+    """
+    <div style="padding:10px;border-radius:8px;background:rgba(104, 240, 125, 0.4)">
+        📘 For detailed instructions, visit the 
+        <a href="https://github.com/chandan-00/Difference_check/blob/main/README.md" target="_blank">
+        GitHub Repository</a>.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 def generate_full_diff_report(diffs, metadata=None, title="Full Policy Diff Report"):
     """
     Create a single combined HTML document containing diffs for all compared columns.
